@@ -17,19 +17,23 @@ exports.parseTemplate = function(obj, iterations) {
     var finalArr = [];
 
     for (var i = 1; i <= iterations; i++) {
-	recurse(obj, i);
+	var x = recurse(obj, i);
+	finalArr.push(x);
     }
 
     function recurse(obj, iteration) {
 	if (obj instanceof Array) {
 	    for (var i = 0; i < obj.length; i++) {
-		recurse(obj[i], iteration);
+		var w = recurse(obj[i], iteration);
+		if (w) {
+		    return(obj);
+		}
 	    }
 	} else if (obj instanceof Object && !(obj instanceof Array)) {
 	    for (var key in obj) {
 		var x = recurse(obj[key], iteration);
-		if(x){
-		    console.log(x);
+		if(x) {
+		    return true;
 		}
 	    }
 	} else if (typeof(obj) === 'string') {
@@ -39,9 +43,10 @@ exports.parseTemplate = function(obj, iterations) {
 		item+=iteration;
 		splitStr[1] = item;
 		var y = splitStr.join('$');
-		obj = y;		
-		return 'blue';
+		return obj = y;
 	    }
 	}
     }
+
+    return finalArr;
 };
