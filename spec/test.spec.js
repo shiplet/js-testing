@@ -17,7 +17,7 @@ exports.parseTemplate = function(obj, iterations) {
     var finalArr = [];
 
     for (var i = 1; i <= iterations; i++) {
-	holdArr.push(obj);
+	holdArr.push(obj.slice(0, obj.length));
     }
 
     for (var j = 0; j < holdArr.length; j++ ) {
