@@ -13,40 +13,45 @@ exports.parseTemplate = function(obj, iterations) {
 	return false;
     }
 
-    var testArr = [];
+    var holdArr = [];
     var finalArr = [];
 
     for (var i = 1; i <= iterations; i++) {
-	var x = recurse(obj, i);
-	finalArr.push(x);
+	holdArr.push(obj);
+    }
+
+    for (var j = 0; j < holdArr.length; j++ ) {
+	recurse(holdArr[j], j);
+	console.log('Here');
     }
 
     function recurse(obj, iteration) {
-	if (obj instanceof Array) {
-	    for (var i = 0; i < obj.length; i++) {
-		var w = recurse(obj[i], iteration);
-		if (w) {
-		    return(obj);
+    	if (obj instanceof Array) {
+    	    for (var i = 0; i < obj.length; i++) {
+    		recurse(obj[i], iteration);	
+    	    }
+    	} else if (obj instanceof Object && !(obj instanceof Array)) {
+    	    for (var key in obj) {
+    		var x = recurse(obj[key], iteration);
+    		if(x) {
+    		    console.log('Successful x-ing: ', x);
+    		    obj[key] = x;		    		   		    
+    		}
+		if (x && x.indexOf('year') !== -1 ) {
+		    //console.log(obj);
 		}
-	    }
-	} else if (obj instanceof Object && !(obj instanceof Array)) {
-	    for (var key in obj) {
-		var x = recurse(obj[key], iteration);
-		if(x) {
-		    return true;
-		}
-	    }
-	} else if (typeof(obj) === 'string') {
-	    if (obj.indexOf('<$') !== -1 && obj.indexOf('$>') !== -1) {
-		var splitStr = obj.split('$');
-		var item = splitStr[1];
-		item+=iteration;
-		splitStr[1] = item;
-		var y = splitStr.join('$');
-		return obj = y;
-	    }
-	}
+    	    }
+    	} else if (typeof(obj) === 'string') {
+    	    if (obj.indexOf('<$') !== -1 && obj.indexOf('$>') !== -1) {
+    		var splitStr = obj.split('$');
+    		var item = splitStr[1];
+    		item+=iteration;
+    		splitStr[1] = item;
+    		var y = splitStr.join('$');
+    		return y;
+    		//console.log(obj);
+    	    }
+    	}
     }
-
-    return finalArr;
+    
 };
