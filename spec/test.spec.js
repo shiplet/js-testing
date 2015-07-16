@@ -101,7 +101,7 @@ exports.parseTemplate = function(obj, iterations) {
 	 value, increments it with the 'iteration' parameter, and returns it.
 
 	 This returned value will be caught by the above block, which then sets the
-	 calling key, the key that was active when the 'recurse' function was called,
+	 calling key - the key that was active when the 'recurse' function was called -
 	 equal to the returned value.
 
 	 If the returned value contains the word 'year', the last key[value] property
