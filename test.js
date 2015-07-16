@@ -10,5 +10,8 @@ var test = require('./spec/test.spec');
 
 
 var a = test.parseTemplate(data, 4);
-//console.log(JSON.stringify(a, null, 2));
-//console.log(a.length);
+
+console.log(JSON.stringify(a, null, 2));
+console.log(a.length);
+
+
