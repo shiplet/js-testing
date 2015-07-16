@@ -100,7 +100,7 @@ exports.parseTemplate = function(obj, iterations) {
 	 '<$' and '&>'. If the tags are found, it parses out the contained 
 	 value, increments it with the 'iteration' parameter, and returns it.
 
-	 This returned value will be caught by the above block, which then sets 
+	 This returned value will be caught by the above block, which then sets the
 	 calling key, the key that was active when the 'recurse' function was called,
 	 equal to the returned value.
 
