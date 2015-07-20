@@ -56,7 +56,7 @@ exports.parseTemplate = function(obj, iterations) {
      --> Is it a 'string'?
 
      If any of these conditions aren't met, the function silently fails. See below for 
-     behaviors specific to each criteria.
+     behaviors specific to each criterion.
 
      ======================= */
 

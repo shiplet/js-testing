@@ -1,93 +1,89 @@
 [
-    {
-	"template01animated": {
-	    "slides": [],
-	    "slideCount": 1,
-	    "default": {
-		"badgePosition": {
-		    "show": true,
-		    "vertical": "bottom",
-		    "horizontal": "left"
-		},
-		"badgeDirectional": {
-		    "show": false
-		},
-		"bgPosition": {
+    {   
+	"default": {
+	    "badgePosition": {
+		"show": true,
+		"vertical": "bottom",
+		"horizontal": "left"
+	    },
+	    "badgeDirectional": {
+		"show": false
+	    },
+	    "bgPosition": {
+		"horizontal": "0",
+		"vertical": "0",
+		"reset": {
 		    "horizontal": "0",
-		    "vertical": "0",
-		    "reset": {
-			"horizontal": "0",
-			"vertical": "0"
-		    }
+		    "vertical": "0"
+		}
+	    },
+	    "buttonLink": "http://",
+	    "cta": "CTA HERE",
+	    "font": {
+		"primary": {
+		    "families": ["Lato", "Helvetica", "Arial", "Verdana", "Geneva", "Georgia", "Utopia", "Charter", "Times New Roman", "Times", "Courier New", "Courier"],
+		    "family": "Lato",
+		    "makeSize": "1.1",
+		    "modelSize": "1.12"
 		},
-		"buttonLink": "http://",
-		"cta": "CTA HERE",
-		"font": {
+		"secondary": {
+		    "families": ["Lato", "Helvetica", "Arial", "Verdana", "Geneva", "Georgia", "Utopia", "Charter", "Times New Roman", "Times", "Courier New", "Courier"],
+		    "family": "Lato",
+		    "size": "1.1"
+		},
+		"reset": {
 		    "primary": {
-			"families": ["Lato", "Helvetica", "Arial", "Verdana", "Geneva", "Georgia", "Utopia", "Charter", "Times New Roman", "Times", "Courier New", "Courier"],
 			"family": "Lato",
 			"makeSize": "1.1",
 			"modelSize": "1.12"
 		    },
 		    "secondary": {
-			"families": ["Lato", "Helvetica", "Arial", "Verdana", "Geneva", "Georgia", "Utopia", "Charter", "Times New Roman", "Times", "Courier New", "Courier"],
 			"family": "Lato",
 			"size": "1.1"
-		    },
-		    "reset": {
-			"primary": {
-			    "family": "Lato",
-			    "makeSize": "1.1",
-			    "modelSize": "1.12"
-			},
-			"secondary": {
-			    "family": "Lato",
-			    "size": "1.1"
-			}
 		    }
-		},
-		"footer": {
-		    "position": "bottom-fix"
-		},
-		"header": {
-		    "show": true,
-		    "position": "top-fix"
-		},
-		"logoImage": "<$logo$>",
-		"logoImageSize": "104 x 39",
-		"make": "<$make$>",
-		"marqueeText": {
-		    "show": false
-		},
-		"maxInput": 15,
-		"model": "<$model$>",
-		"price": "<$price$>",
-		"primaryColor": {
+		}
+	    },
+	    "footer": {
+		"position": "bottom-fix"
+	    },
+	    "header": {
+		"show": true,
+		"position": "top-fix"
+	    },
+	    "logoImage": "<$logo$>",
+	    "logoImageSize": "104 x 39",
+	    "make": "<$make$>",
+	    "marqueeText": {
+		"show": false
+	    },
+	    "maxInput": 15,
+	    "model": "<$model$>",
+	    "price": "<$price$>",
+	    "primaryColor": {
+		"color": "201, 56, 43",
+		"opacity": "0.9",
+		"reset": {
 		    "color": "201, 56, 43",
-		    "opacity": "0.9",
-		    "reset": {
-			"color": "201, 56, 43",
-			"opacity": "0.9"
-		    }
-		},
-		"secondaryColor": {
+		    "opacity": "0.9"
+		}
+	    },
+	    "secondaryColor": {
+		"color": "227, 227, 227",
+		"opacity": "1",
+		"reset": {
 		    "color": "227, 227, 227",
-		    "opacity": "1",
-		    "reset": {
-			"color": "227, 227, 227",
-			"opacity": "1"
-		    }
-		},
-		"sliderInterval": 2000,
-		"sliderDirection": "left",
-		"tel": {
-		    "show": false,
-		    "link": null
-		},
-		"vehicleImage": "<$vehicleImage$>",
-		"vehicleImageSize": "300 x 250",
-		"year": "<$year$>"
-	    }						
+		    "opacity": "1"
+		}
+	    },
+	    "sliderInterval": 2000,
+	    "sliderDirection": "left",
+	    "tel": {
+		"show": false,
+		"link": null
+	    },
+	    "vehicleImage": "<$vehicleImage$>",
+	    "vehicleImageSize": "300 x 250",
+	    "year": "<$year$>"
 	}
     }
 ]
